@@ -1,5 +1,3 @@
-# Railway configuration — Netra Panel (Node port)
-# Deploy: Railway -> New Project -> Deploy from GitHub repo (uses this file + Dockerfile)
 {
   "$schema": "https://railway.app/railway.schema.json",
   "build": {
