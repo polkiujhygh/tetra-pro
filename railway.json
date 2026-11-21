@@ -1,0 +1,16 @@
+# Railway configuration — Netra Panel (Node port)
+# Deploy: Railway -> New Project -> Deploy from GitHub repo (uses this file + Dockerfile)
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "DOCKERFILE",
+    "dockerfilePath": "Dockerfile"
+  },
+  "deploy": {
+    "startCommand": "node --import ./hooks.mjs server.js",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 60,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}

@@ -1,0 +1,18 @@
+# Render Blueprint — Netra Panel (Node port)
+# Deploy: Render Dashboard -> New -> Blueprint -> point to this repo/folder
+services:
+  - type: web
+    name: netra-panel
+    runtime: docker
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: KV_PATH
+        value: /app/data/kv.json
+      # optional: override VLESS UUID / Trojan password / secure path
+      # - key: UUID
+      #   value: your-uuid-here
+      # - key: TR_PASS
+      #   value: your-trojan-password
+      # - key: SUB_PATH
+      #   value: your-secret-path
